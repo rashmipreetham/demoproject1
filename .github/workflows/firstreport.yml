@@ -1,8 +1,11 @@
 name: Generate Cypress Reports
 on:
-  schedule: ## Schedule the job to run at a particular time.
+  push:
+   branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  #schedule: ## Schedule the job to run at a particular time.
     # * is a special character in YAML so you have to quote this string
-    - cron:  '00 09 * * *'
 jobs:
   cypress-test:
     
