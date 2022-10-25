@@ -1,9 +1,9 @@
 name: Generate Cypress Reports
 on:
   push:
-   branches: [ "master" ]
+   branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
   #schedule: ## Schedule the job to run at a particular time.
     # * is a special character in YAML so you have to quote this string
 jobs:
