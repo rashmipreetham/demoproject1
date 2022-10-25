@@ -18,3 +18,13 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+const resizeObserver = new ResizeObserver(entries => {
+    // We wrap it in requestAnimationFrame to avoid this error - ResizeObserver loop limit exceeded
+    window.requestAnimationFrame(() => {
+      if (!Array.isArray(entries) || !entries.length) {
+        return;
+      }
+      // your code
+    });
+ });
