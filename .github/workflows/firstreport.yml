@@ -2,7 +2,7 @@ name: Generate Cypress Reports
 on:
   schedule: ## Schedule the job to run at a particular time.
     # * is a special character in YAML so you have to quote this string
-    - cron:  '05 09 * * *'
+    - cron:  '00 09 * * *'
 jobs:
   cypress-test:
     
