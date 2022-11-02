@@ -15,16 +15,15 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-file-upload'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-const resizeObserver = new ResizeObserver(entries => {
-    // We wrap it in requestAnimationFrame to avoid this error - ResizeObserver loop limit exceeded
-    window.requestAnimationFrame(() => {
-      if (!Array.isArray(entries) || !entries.length) {
-        return;
-      }
-      // your code
-    });
- });
+const resizeObserverLoopErrRe = /^[^(ResizeObserver loop limit exceeded)]/
+Cypress.on('uncaught:exception', (err) => {
+    /* returning false here prevents Cypress from failing the test */
+    if (resizeObserverLoopErrRe.test(err.message)) {
+        return false
+    }
+})
