@@ -18,6 +18,8 @@ jobs:
     
     - name: Install cypress and verify
       run: |
+        npm install mochawesome 
+        npm install mocha
         npm ci
         $(npm bin)/cypress verify
         
@@ -37,7 +39,4 @@ jobs:
       
    
     - name: Merge test results into one
-      run: npm run report:merge
-  
-    - name: Generate HTML report
-      run: npm run report:generate
+      run: npx cypress run --spec cypress/integration/*.js --reporter mochawesome
