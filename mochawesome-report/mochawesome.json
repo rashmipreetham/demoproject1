@@ -1,0 +1,174 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 5,
+    "passes": 1,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-11-02T10:57:36.019Z",
+    "end": "2022-11-02T10:58:44.501Z",
+    "duration": 68482,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b32af598-6494-49e0-8459-144dd2a857d5",
+      "title": "",
+      "fullFile": "cypress/integration/newtest.js",
+      "file": "cypress/integration/newtest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "twitter login page",
+          "fullTitle": "twitter login page",
+          "timedOut": null,
+          "duration": 13529,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://twitter.com');\ncy.wait(2000);\ncy.get('[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click();\ncy.get('.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('9019225230');\ncy.get('.r-nllxps > .r-42olwf > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('.r-mk0yit.r-13qz1uu > .r-mk0yit').type('Password@123');\ncy.get('[data-testid=\"LoginForm_Login_Button\"]').click({\n  force: true\n});\ncy.wait(10000);",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox`, but never found it.\n    at Context.eval (https://twitter.com/__cypress/tests?p=cypress\\integration\\newtest.js:104:6)",
+            "diff": null
+          },
+          "uuid": "b7d92b10-29bd-400d-b770-a07fe779c38c",
+          "parentUUID": "b32af598-6494-49e0-8459-144dd2a857d5",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "twitter properties test",
+          "fullTitle": "twitter properties test",
+          "timedOut": null,
+          "duration": 24707,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://twitter.com');\ncy.get('[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click();\ncy.get('.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('9019225230');\ncy.get('.r-nllxps > .r-42olwf > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('.r-mk0yit.r-13qz1uu > .r-mk0yit').type('Password@123');\ncy.get('[data-testid=\"LoginForm_Login_Button\"]').click({\n  force: true\n});\ncy.wait(10000);\ncy.get('.css-4rbku5 > .r-1awozwy > .r-1cvl2hr > g > path').should('be.visible');\ncy.get('[data-testid=\"AppTabBar_Home_Link\"] > .r-1awozwy > .css-1dbjc4n > .r-18jsvk2').should('be.visible');\ncy.get('[data-testid=\"AppTabBar_Explore_Link\"] > .r-1awozwy > .css-1dbjc4n > .r-18jsvk2').should('be.visible');\ncy.get('[data-testid=\"AppTabBar_DirectMessage_Link\"] > .r-1awozwy > .css-1dbjc4n > .r-18jsvk2').should('be.visible');\ncy.get('.r-1h3ijdo > .r-1wbh5a2 > .css-1dbjc4n > .css-4rbku5 > .css-901oao').should('be.visible');\ncy.get('[data-testid=\"UserAvatar-Container-rashmib1103\"] > :nth-child(2) > .r-bztko3 > :nth-child(2) > .r-ggadg3 > .css-4rbku5 > :nth-child(4) > .css-1dbjc4n').should('be.visible');\ncy.get('[href=\"/rashmib1103/lists\"] > .r-1awozwy > .css-1dbjc4n > .r-18jsvk2').should('be.visible');",
+          "err": {},
+          "uuid": "3204c0cb-7666-4764-bd30-c072666d8e74",
+          "parentUUID": "b32af598-6494-49e0-8459-144dd2a857d5",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "twitter search page",
+          "fullTitle": "twitter search page",
+          "timedOut": null,
+          "duration": 2929,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://twitter.com');\ncy.get('[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click();\ncy.get('.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('9019225230');\ncy.get('.r-nllxps > .r-42olwf > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click({\n  force: true\n}); //cy.wait(2000)\ncy.get('.r-mk0yit.r-13qz1uu > .r-mk0yit').type('Password@123');\ncy.get('[data-testid=\"LoginForm_Login_Button\"]').click({\n  force: true\n}); //cy.wait(10000)\ncy.get('[data-testid=\"AppTabBar_Explore_Link\"] > .r-1awozwy > .css-1dbjc4n > .r-18jsvk2').click();\ncy.get('[data-testid=\"SearchBox_Search_Input\"]').type('narendra modi{enter}'); // cy.get('[data-testid=\"18839785-follow\"]').click({force:true})\n//cy.get('[data-testid=\"18839785-unfollow\"] > .r-1awozwy').should('be.visible')\n///unfollow method\n//cy.get('[data-testid=\"18839785-unfollow\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').should('be.visible')\ncy.get('[data-testid=\"18839785-unfollow\"] > .r-1awozwy').click({\n  force: true\n});",
+          "err": {
+            "message": "SecurityError: Blocked a frame with origin \"https://twitter.com\" from accessing a cross-origin frame.",
+            "estack": "SecurityError: Blocked a frame with origin \"https://twitter.com\" from accessing a cross-origin frame.\nError: Blocked a frame with origin \"https://twitter.com\" from accessing a cross-origin frame.\n    at setWindowDocumentProps (https://twitter.com/__cypress/runner/cypress_runner.js:177905:42)\n    at HTMLIFrameElement.<anonymous> (https://twitter.com/__cypress/runner/cypress_runner.js:178288:9)\n    at HTMLIFrameElement.dispatch (https://twitter.com/__cypress/runner/cypress_runner.js:117089:27)\n    at HTMLIFrameElement.elemData.handle (https://twitter.com/__cypress/runner/cypress_runner.js:116897:28)",
+            "diff": null
+          },
+          "uuid": "a76f1dfd-c294-4fe4-8381-b687efbaac50",
+          "parentUUID": "b32af598-6494-49e0-8459-144dd2a857d5",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "twitter message page",
+          "fullTitle": "twitter message page",
+          "timedOut": null,
+          "duration": 9505,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://twitter.com');\ncy.wait(2000);\ncy.get('[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click();\ncy.get('.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('9019225230');\ncy.get('.r-nllxps > .r-42olwf > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click({\n  force: true\n}); //cy.wait(2000)\ncy.get('.r-mk0yit.r-13qz1uu > .r-mk0yit').type('Password@123');\ncy.get('[data-testid=\"LoginForm_Login_Button\"]').click({\n  force: true\n}); //cy.wait(10000)\ncy.get('[data-testid=\"AppTabBar_DirectMessage_Link\"] > .r-1awozwy').click();\ncy.get('[data-testid=\"NewDM_Button\"] > .r-1awozwy').click();\ncy.wait(2000);\ncy.get(':nth-child(2) > .r-1iusvr4 > .r-1wtj0ep > :nth-child(1) > :nth-child(1) > .r-1awozwy.r-1wbh5a2 > .r-1wbh5a2 > .css-1dbjc4n > .css-1hf3ou5 > .css-901oao').click(); //cy.get(':nth-child(2) > .r-1iusvr4 > .r-1wtj0ep > :nth-child(1) > :nth-child(1) > .r-1awozwy.r-1wbh5a2 > .r-1wbh5a2 > .css-1dbjc4n > .css-1hf3ou5 > .css-901oao').click()\ncy.get('[data-testid=\"nextButton\"]').click();\ncy.get('.public-DraftStyleDefault-block').type('hii');\ncy.get('[data-testid=\"dmComposerSendButton\"] > .r-1awozwy').click();\ncy.get('[data-testid=\"AppTabBar_Home_Link\"] > .r-1awozwy').click(); //cy.get('[data-testid=\"searchPeople\"]').type('kirandeshmukhmath').click({force:true})\n//cy.get('.r-1iusvr4 > .r-1wtj0ep').click({force:true})",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao`, but never found it.\n    at Context.eval (https://twitter.com/__cypress/tests?p=cypress\\integration\\newtest.js:162:6)",
+            "diff": null
+          },
+          "uuid": "3378be7d-b7d6-43a2-8aa9-6e1f13ccfd25",
+          "parentUUID": "b32af598-6494-49e0-8459-144dd2a857d5",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "twitter edit profile page",
+          "fullTitle": "twitter edit profile page",
+          "timedOut": null,
+          "duration": 12716,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://twitter.com');\ncy.wait(2000);\ncy.get('[data-testid=\"login\"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click();\ncy.get('.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('9019225230');\ncy.get('.r-nllxps > .r-42olwf > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click({\n  force: true\n}); //cy.wait(2000)\ncy.get('.r-mk0yit.r-13qz1uu > .r-mk0yit').type('Password@123');\ncy.get('[data-testid=\"LoginForm_Login_Button\"]').click({\n  force: true\n});\ncy.get('[data-testid=\"AppTabBar_Profile_Link\"] > .r-1awozwy').click({\n  force: true\n});\ncy.get('[data-testid=\"editProfileButton\"]').click({\n  force: true\n}); //cy.get('.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-a023e6.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0').then(function(data){\n//  data.attachfile('C:\\Rashmi-learning\\New folder\\demoproject1\\cypress\\plant.jpg')\ncy.get('.r-1uq9rlk > .r-d045u9 > .css-1dbjc4n.r-16y2uox > .r-lsa89y > .css-1dbjc4n.r-1awozwy > .css-18t94o4 > .r-1awozwy').attachFile('../fixtures/plant.jpg'); //cy.get('[data-testid=\"fileInput\"]').attachfile('../fixtures/plant.jpg')\ncy.wait(2000);\ncy.get(':nth-child(5) > .r-1ets6dv > :nth-child(1) > .r-16y2uox').type('bangalore');\ncy.wait(2000);\ncy.get(':nth-child(4) > .r-1ets6dv > :nth-child(1) > .r-16y2uox > .css-901oao > .r-30o5oe').type('be happy be confident');\ncy.wait(2000);\ncy.get('[data-testid=\"Profile_Save_Button\"]').click({\n  force: true\n});",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.r-mk0yit > .r-1ets6dv > :nth-child(1) > .r-16y2uox`, but never found it.\n    at Context.eval (https://twitter.com/__cypress/tests?p=cypress\\integration\\newtest.js:188:6)",
+            "diff": null
+          },
+          "uuid": "1f685c62-45ae-49dc-8f27-71350f220cbb",
+          "parentUUID": "b32af598-6494-49e0-8459-144dd2a857d5",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "3204c0cb-7666-4764-bd30-c072666d8e74"
+      ],
+      "failures": [
+        "b7d92b10-29bd-400d-b770-a07fe779c38c",
+        "a76f1dfd-c294-4fe4-8381-b687efbaac50",
+        "3378be7d-b7d6-43a2-8aa9-6e1f13ccfd25",
+        "1f685c62-45ae-49dc-8f27-71350f220cbb"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 63386,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -73,7 +73,7 @@
     //cy.get('.r-1iusvr4 > .r-1wtj0ep').click({force:true})
     })
 
-    it.only ('twitter edit profile page', function() {
+    it('twitter edit profile page', function() {
         cy.visit('https://twitter.com')
         cy.wait(2000)
         cy.get('[data-testid="login"] > .r-1awozwy > .css-1hf3ou5 > .css-901oao').click()
