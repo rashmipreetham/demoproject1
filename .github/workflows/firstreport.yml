@@ -24,10 +24,10 @@ jobs:
         $(npm bin)/cypress verify
         
     - name: Run cypress tests
-      uses: cypress-io/github-action@v2
-      with:
+      run: npx cypress run --spec cypress\\integration\\*.js --reporter mochawesome
+    
           # Specify Browser since container image is compile with Firefox
-          browser: chrome
+ 
       continue-on-error: true
     
       
@@ -36,7 +36,3 @@ jobs:
         mkdir public
         cp -r cypress/videos public/videos
         cp -r cypress/screenshots public/screenshots
-      
-   
-    - name: Merge test results into one
-      run: npx cypress run --spec cypress/integration/*.js --reporter mochawesome
