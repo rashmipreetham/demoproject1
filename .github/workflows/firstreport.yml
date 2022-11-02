@@ -24,7 +24,7 @@ jobs:
         $(npm bin)/cypress verify
         
     - name: Run cypress tests
-      run: npx cypress run --spec cypress\\integration\\*.js --reporter mochawesome
+      run: npx cypress run --spec cypress/integration/*.js --reporter mochawesome
     
           # Specify Browser since container image is compile with Firefox
  
